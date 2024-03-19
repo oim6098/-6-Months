@@ -1,0 +1,11 @@
+Mark [2] 발표 정리 
+( 문법을 활용한 폰트 나 색상을 보기위한 사진이 있어야 함  ) 
+
+[ 텍스트 기반 마크업 언어 < MarkDown ( 문법 ) ] 
+코드 블럭 
+
+[ MarkDown 언어의 사용법 및 종류 ]
+(1)_Headers 는 HTML 과 유사하다.
+
+1.https://gparkkii.github.io/tech/markdown/ <- 발표에 포함된 내용 예시 
+ 
