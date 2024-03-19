@@ -10,6 +10,3 @@ Mark [2] 발표 정리
 
 1.https://gparkkii.github.io/tech/markdown/ <- 발표에 포함된 내용 예시 
  
-=======
-
->>>>>>> bf4d37d68f13097491a200c3e6fb432f5687bb93
