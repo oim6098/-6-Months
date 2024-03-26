@@ -1,0 +1,38 @@
+
+ [ 씬 ] > [ 오브젝트 ] > [ 컴퍼넌트 ]
+
+ [ OS ] [ 게임엔진 ] < - 메인함수가 하나가 아님
+
+ 1. 이벤트 함수
+ ( 라이프 사이클 ) / * 중요 
+ 
+ [ Awake ] > [ Start ] ( 순서 ) 
+ 
+ [ Legend ] < 범례 ( 차트 ) 
+ > User CallBack [ 작업이 끝나는 신호를 보냄 ] 
+ > internal function 
+ > internal multithreaded function 
+
+ [ lnitializetion ] < 초기화  
+ > Awake / OnEnable 
+ 
+ [ Editor ] 
+ >Reset  
+( 오브젝트에 처음 연결하거나 Reset 커맨드를 사용할 떄 스크립트의 프로퍼티를 초기화하기 위해 Reset을 호출한다. ) 
+
+ [ lnitializetion ] < 초기화 
+ > Start 
+
+ [ Physics ] < 물리 개념 
+ > FixedUpdate 
+ > State machine update
+ > OnTrigger 
+ > OnCollision  
+
+ [ Game Logic ] 
+ > Update 
+ > OnAnimatorMove
+
+ [ Scene rendering ]
+ 
+ [ Gizmo Rendering ] 
