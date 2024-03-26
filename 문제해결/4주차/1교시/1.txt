@@ -1,0 +1,29 @@
+ / 객체지향 
+
+ ( 1 ) - [ Linked List ] 
+ 
+ [ A ] <- 1 ( 주소값 ) ] ( .next ) [ B ] <- 2 ] ( .next ) [ C ] <- 3 ] 
+
+ [ (Box) Point = ( intersect ) A ] -> Point = Point.next [ Point = B ] -> Point = Point.next [ Point = C ] 
+ -> Point = Point.next [ Point = null ] 
+
+ [ 주소값 ]
+
+ [ 데이터의 주소값이란 해당 데이터가 저장된 ( 메모리의 시작 주소 ) ]
+
+ [ 포인터 ]
+
+ [ 메모리의 주소값을 저장하는 ( 변수 ) ]
+
+ ( 2 ) - [ Value / Reference ]
+
+ [ Value Type ] 
+
+ [ 값 형식 ] 
+
+ [ Reference Type ]
+
+ [ 참조 형식 ]
+
+ ( 3 ) - [ 메모리 폴 ] <- Queue Size 제어 ( 재사용 ) 
+ 시작복잡도 { 자료 구조 } 
