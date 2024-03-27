@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>가위바위보 게임</title>
+    <style>
+      /* button{display: block;} */
+      #box{width: 400px;}
+      .image{background-color: lightgray; width: 200px; height: 200px; float: left;
+      position: relative;}
+      #textbox{height: 90px; width: 800px;}
+      img{position: absolute; top: 50%; left: 50%;
+      transform: translateX(-50%)translateY(-50%);}
+    </style>
+  </head>
+  <body>
+    <h3>실습: 가위바위보 게임하기</h3>
+    <hr>
+    <button id="result" type="button" name="button">결과보기</button>
+    <!-- 승부에 대한 정보값이 출력되는 곳 -->
+    <div id="textbox">
+      <b id="play01_text">안나</b><br>
+      <b id="play02_text">신후</b><br>
+      <b id="answer">결과</b>
+    </div>
+    <!-- 가위바위보의 이미지가 출력되는 곳 -->
+    <div id="box">
+      <div class="image" id="div1">
+        <img id="play01" src="" alt="">
+      </div>
+      <div class="image" id="div2">
+        <img id="play02" src="" alt="">
+      </div>
+    </div>
+    <script>
+    let user_a = prompt("안나를 위한 가위, 바위, 보를 입력하세요: ", "바위");
+    let user_b = prompt("신후를 위한 가위, 바위, 보를 입력하세요: ", '바위');
+    // id="result"
+    let button_result = document.getElementById('result');
+    // id="play01" 안나 이미지
+    let play01_image = document.getElementById('play01');
+    //id="play02" 신후 이미지
+    let play02_image = document.getElementById('play02');
+    let count_playa = 0;
+    let count_playb = 0;
+
+    button_result.addEventListener('click', function () {
+    if(user_b!='가위'&&user_b!='바위'&&user_b!='보'){
+      document.getElementById('play02_text').innerHTML = '신후 값 입력 오류 -->'+user_b;
+      //document.write('신후 값 오류 -->'+user_b+'<br>');
+    }
+    //count == 1 -> 가위 count == 2 -> 바위 count == 3 -> 보
+    if(user_a == '가위'){
+      count_playa = 1;
+      if(user_b == '가위'){
+        //<b id="answer">결과</b>
+        //document.write("무승부");
+        document.getElementById('answer').innerHTML = '무승부';
+        count_playb = 1;
+      }else if(user_b == '바위'){
+        //document.write('신후 승리');
+        document.getElementById('answer').innerHTML = '신후 승리';
+        count_playb = 2;
+      }else if(user_b == '보'){
+        //document.write('안나 승리');
+        document.getElementById('answer').innerHTML = '안나 승리';
+        count_playb = 3;
+      }else{
+        //document.write('신후 값 입력 오류 -->'+user_b);
+        //<b id="play02_text">신후</b><br>
+        document.getElementById('play02_text').innerHTML = '신후 값 입력 오류 -->'+user_b;
+      }
+    }else if(user_a == '바위'){
+      count_playa = 2;
+      if(user_b == '바위'){
+        //document.write('무승부');
+        document.getElementById('answer').innerHTML = '무승부';
+        count_playb = 2;
+      }else if(user_b == '보'){
+        // document.write('신후 승리');
+        document.getElementById('answer').innerHTML = '신후 승리';
+        count_playb = 3;
+      }else if(user_b == '가위'){
+        //document.write('안나 승리');
+        document.getElementById('answer').innerHTML = '안나 승리';
+        count_playb = 1;
+      }else{
+        //document.write("신후 값 입력 오류 -->"+user_b);
+        //<b id="play02_text">신후</b><br>
+        document.getElementById('play02_text').innerHTML = '신후 값 입력 오류 -->'+user_b;
+      }
+    }else if(user_a == '보'){
+      count_playa = 3;
+      if(user_b == '보'){
+        //document.write('무승부');
+        document.getElementById('answer').innerHTML = '무승부';
+        count_playb = 3;
+      }else if(user_b == '가위'){
+        //document.write('신후 승리')
+        document.getElementById('answer').innerHTML = '신후 승리';
+        count_playb = 1;
+      }else if(user_b == '바위'){
+        //document.write('안나 승리')
+        document.getElementById('answer').innerHTML = '안나 승리';
+        count_playb = 2;
+      }else{
+        //<b id="play02_text">신후</b><br>
+        //document.write('신후 값 입력 오류 -->'+user_b);
+        document.getElementById('play02_text').innerHTML = '신후 값 입력 오류 -->'+user_b;
+      }
+    }else{
+      //<b id="play01_text">안나</b><br>
+      //document.write('안나 값 입력 오류 -->'+user_a);
+      document.getElementById('play01_text').innerHTML = '안나 값 입력 오류 -->'+user_a;
+    }
+
+    if(count_playa == 1){
+      document.getElementById('play01_text').innerHTML = '안나 가위';
+      play01_image.src = "image/scissor.png";
+    }else if(count_playa == 2){
+      document.getElementById('play01_text').innerHTML = '안나 바위';
+      play01_image.src = "rock.png";
+    }else if(count_playa == 3){
+      document.getElementById('play01_text').innerHTML = '안나 보';
+      play01_image.src = "paper.png";
+    }
+    if(count_playb == 1){
+      document.getElementById('play02_text').innerHTML = '신후 가위';
+      play02_image.src = "scissor.png";
+    }else if(count_playb == 2){
+      document.getElementById('play02_text').innerHTML = '신후 바위';
+      play02_image.src = "rock.png";
+    }else if(count_playb == 3){
+      document.getElementById('play02_text').innerHTML = '신후 보';
+      play02_image.src = "paper.png";
+    }
+  })
+    </script>
+  </body>
+</html>
