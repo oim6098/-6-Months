@@ -77,8 +77,21 @@ Modifier > Boolean
 Union 합치기
 Difference 뺴기
 interrsect 교차점
-오브젝트 선택 > Boolean 고르고 > tmvhdlem > apply 
+오브젝트 선택 > Boolean 고르고 > 스포디드 > apply  
 
 Loop Cut 균등분할 = Ctrl + R > 휠굴림 OR 숫자입력 
 
 채우기 <- F
+
+설정 : Edit > Preferences > add on > loop 검색 > 체크
+
+자동 각도 Extrude = 원하는 위치 커서 놓고 Ctrl + 우클릭
+
+Brodge Loop Edges
+
+두께 변경 > Edit Mode 에서 > Alt + S 
+
+솔리드로 만들기
+
+mModifier > Soidfy
+- Thickness 
